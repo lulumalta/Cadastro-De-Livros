@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.ulList{
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.circleStatus{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;    
+}
+
+.divStatus{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.itemList{
+    border: 1px solid #ddd;
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.itemList:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px 3px yellow, 0px 0px 15px 6px green;
+}
+
+.divImg{
+    width: 365px;
+    display: flex;
+    justify-content: center;
+    height: 196px;
+}
+
+.divInfos{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
