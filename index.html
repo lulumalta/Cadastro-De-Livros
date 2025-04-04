@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A5-M2</title>
+    <title>Cadastro de livros</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="conteiner-inputs">
+    <h1 id="titulo">Cadastro de livros</h1>
+    <p id="paragrafo">    Porque não começar a organizar seus queridinhos? Com a ajuda do nosso sistema de cadastro você pode! Basta apenas colocar algumas de suas características, clicar em cadastrar e depois listar. Está pronto! </p>
     <!-- placeholder descrição em cinza -->
-    <input type="text" name="img" id="input-img" placeholder="link de uma imagem">
-    <input type="text" name="otherImg" id="input-otherImg" placeholder="outro link de imagem">
-    <input type="text" name="title" id="input-title" placeholder="titulo do produto">
-    <input type="text" name="description" id="input-description" placeholder="descrição do produto">
-    <input type="text" name="price" id="input-price" placeholder="preço atual do produto">
-    <input type="text" name="oldPrice" id="input-oldPrice" placeholder="preço antigo do produto">
-    <input type="text" name="status" id="input-status" placeholder="status do produto">
-    <button id="btn-save">Salvar</button>
-    <button id="btn-list">listar</button>
+    <input type="text" name="img" id="input-img" placeholder="link da imagem do livro(opicional)">
+    <input type="text" name="title" id="input-title" placeholder="titulo do livro">
+    <input type="text" name="autor" id="input-autor" placeholder="autor">
+    <input type="text" name="price" id="input-price" placeholder="preço atual do livro">
+    <input type="text" name="status" id="input-status" placeholder="lendo/lido">
+    <input type="text" name="avaliacao" id="input-avaliacao" placeholder="avaliação">
+</div>
+    <div class="botoes">
+   <!--botoes-->
+    <button id="btn-save">Cadastrar livro</button>
+    <button id="btn-list">Listar</button>
+    </div>
+    
     <div id="container-list">
+        
         <ul class="ulList" id="product-list">
             
         </ul>

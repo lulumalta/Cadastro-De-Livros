@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 .ulList{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Popins', sans-serif;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -49,3 +49,49 @@
     flex-direction: column;
     height: 250px;
 }
+
+.conteiner-inputs{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto; /* centraliza na tela */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espaço entre os itens */
+    font-family: sans-serif;
+}
+
+
+ .botoes {
+        display: flex;
+        justify-content: center; /* centraliza os botões */
+        gap: 10px;               /* espaço entre os botões */
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+ 
+      #btn-save{
+        background-color: plum;
+      }
+      
+   #titulo{
+    display: flex;
+    justify-content: center;
+   }
+   #paragrafo{
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+
+   }
+   
+
