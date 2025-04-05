@@ -1,8 +1,4 @@
 
-// 0,1,2,3,4
-// (index,1)
-// (2,1)
-// 0,1,3,4
 
 // criar um array vazio
 const products = []
@@ -12,29 +8,29 @@ const products = []
   class Product{
     constructor(img, title, autor, price,avaliacao, status){
       this.img = img;
-      this.autor = autor;
       this.title = title;
-      this.avaliacao = avaliacao;
+      this.autor = autor;
       this.price = price;
+      this.avaliacao = avaliacao;
       this.status = status;
     }
   }
   
   // buscando os inputs(caixa de texto que o usuario esta digitando)
   const inputImg = document.getElementById("input-img");
-  const inputAvaliacao = document.getElementById("input-avaliacao");
   const inputTitle = document.getElementById("input-title");
   const inputAutor = document.getElementById("input-autor");
   const inputPrice = document.getElementById("input-price");
+  const inputAvaliacao = document.getElementById("input-avaliacao");
   const inputStatus = document.getElementById("input-status");
   const btnSave = document.getElementById("btn-save");
   const btnList = document.getElementById("btn-list");
   
   // associar uma função a uma interação do usuario 
   btnSave.addEventListener("click", ()=> {
-    console.log("input: ",inputImg.value, inputTitle.value, inputAvaliacao.value, inputPrice.value, inputAutor.value, inputStatus.value)
+    console.log("input: ",inputImg.value, inputTitle.value, inputAutor.value, inputPrice.value,inputAvaliacao.value, inputStatus.value)
     // criando um novo objeto produto
-    const product = new Product(inputImg.value, inputTitle.value, inputAvaliacao.value, inputPrice.value, inputAutor.value, inputStatus.value)
+    const product = new Product(inputImg.value, inputTitle.value, inputAutor.value, inputPrice.value,inputAvaliacao.value, inputStatus.value)
     console.log("product obj: ",product)
     // .push adicionar um novo elemento ao final do meu array
     products.push(product)
@@ -53,7 +49,7 @@ const products = []
     ulListProducts.innerHTML = '';
     // criando um card para cada produto da lista
     for (let i = 0; i < products.length; i++) {
-      createList(i,products[i].img,  products[i].title, products[i].avaliacao, products[i].price,products[i].autor,  products[i].status)
+      createList(i,products[i].img,  products[i].title, products[i].autor, products[i].price,products[i].avaliacao,  products[i].status)
     }
   }
   
@@ -68,7 +64,9 @@ const products = []
           return 'yellow'
       }else if(status === "lido"){
           return 'green'
-      } 
+      }else{
+        return 'red'
+    }
   }
   
   function createList(index, img, title, avaliacao, price, autor, status){
@@ -80,7 +78,7 @@ const products = []
       const imgProduct = document.createElement("img");
   
       // criando a tag div para infos no javascript
-      const divInfos = document.createElement("div");
+     
       const titleProduct = document.createElement("h3");
       const avaliacao = document.createElement("p");
       const priceProduct = document.createElement("p");
@@ -101,13 +99,13 @@ const products = []
         console.log("editar")
         //  || products[index].title -> este código verifica se existe algo escrito no input
         // caso nao exista ele mantem o valor anterior
-        products[index].title = inputTitle.value || products[index].title;
-        products[index].status = inputStatus.value  || products[index].status;
-        products[index].avaliacao = inputAvaliacao.value  || products[index].avaliacao;
         products[index].img = inputImg.value  || products[index].img;
+        products[index].title = inputTitle.value || products[index].title;
+        products[index].avaliacao = inputAvaliacao.value  || products[index].avaliacao;
+        products[index].status = inputStatus.value  || products[index].status;
         products[index].autor = inputAutor.value  || products[index].autor;
         products[index].price = inputPrice.value  || products[index].price;
-        listProduct();
+         listProduct();
       })
   
       btnDelete.addEventListener("click", ()=>{
@@ -130,7 +128,7 @@ const products = []
       // alterar os textos
       imgProduct.src = img;
       titleProduct.innerText = title;
-      descriptionProduct.innerText = description;
+      avaliacao.innerText = avaliacao;
       titleStatusProduct.innerText = status;
   
       priceProduct.innerText = `R$ ${price}`;
