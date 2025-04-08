@@ -7,10 +7,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
+    
 }
 
 .circleStatus{
     width: 20px;
+    
     height: 20px;
     border-radius: 100%;    
 }
@@ -34,7 +36,7 @@
 
 .itemList:hover{
     transform: translateY(-5px);
-    box-shadow: 0px 0px 15px 3px yellow, 0px 0px 15px 6px green;
+    box-shadow: 0px 0px 15px 3px rgb(244, 127, 191), 0px 0px 15px 6px green;
 }
 
 .divImg{
@@ -61,6 +63,7 @@
     flex-direction: column;
     gap: 10px; /* espaço entre os itens */
     font-family: sans-serif;
+    background-color: burlywood;
 }
 
 
@@ -80,6 +83,7 @@
         cursor: pointer;
         font-family: monospace;
         color: black;
+       
       }
  
      
@@ -88,6 +92,8 @@
     display: flex;
     justify-content: center;
     font-family: cursive;
+    color: brown;
+    
    }
 
    #paragrafo{
@@ -104,4 +110,77 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+  }
+
+ /* Estilo geral para o container */
+#container-list {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  
+  /* Estilo da lista */
+  #product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo de cada item da lista */
+  .itemList {
+    background: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilo da imagem do livro */
+  .itemList img {
+    height: 160px;
+    border-radius: 8px;
+  }
+  
+  /* Estilo das informações do livro */
+  .divInfos {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .divInfos h3 {
+    color: #4a90e2;
+    margin-bottom: 8px;
+  }
+  
+  .divInfos p {
+    margin: 4px 0;
+    color: #5a5a5a;
+  }
+  
+  .divInfos p:nth-child(3) {
+    color: #ff9800;
+  }
+  
+  .divInfos p:nth-child(4) {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  /* Estilo da seção de status */
+  .divStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
   }
